@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "eslint-config-mm",
+  "version": "0.0.1",
+  "description": "MachineMetrics eslint baseline",
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "MachineMetrics",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^12.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.8.1"
+  },
+  "engines": {
+    "node": ">= 4"
+  }
+}
