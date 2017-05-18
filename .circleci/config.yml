@@ -1,0 +1,19 @@
+version: 2
+executorType: docker
+jobs:
+  build:
+    docker:
+      - image: machinemetrics/ci-node:6.10.1.0
+    working_directory: ~/eslint-config-mm
+    steps:
+      - checkout
+      - restore_cache:
+          key: eslint-config-mm-full-{{ .Branch }}-{{ checksum "package.json" }}
+      - run:
+          command: npm update
+      - save_cache:
+          key: eslint-config-mm-full-{{ .Branch }}-{{ checksum "package.json" }}
+          paths:
+            - ~/eslint-config-mm/node_modules
+      - run:
+          command: npm test

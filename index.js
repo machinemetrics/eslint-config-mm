@@ -3,7 +3,7 @@
 module.exports = {
   rules: {
     'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-    'strict': ['off'],
+    strict: ['off'],
   },
   extends: 'airbnb',
 };
