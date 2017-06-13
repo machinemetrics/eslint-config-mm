@@ -6,13 +6,9 @@ const mm = require('../');
 
 const tmp = require('tmp');
 const fs = require('fs');
-// const execFile = require('child_process').execFile;
-// const childProcess = require('child_process');
 
 const unsafeCleanup = false;
 const testDir = tmp.dirSync({ unsafeCleanup }).name;
-const debug = console;
-debug.log('testdir:', JSON.stringify(testDir));
 
 const eslintOpts = {
   envs: ['node', 'es6'],
