@@ -3,7 +3,7 @@
 module.exports = {
   rules: {
     'max-len': [
-      'error',
+      'warn',
       120,
       2,
       {
