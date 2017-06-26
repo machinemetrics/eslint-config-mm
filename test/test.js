@@ -40,15 +40,15 @@ describe('lints as expected', () => {
     expect(report.warningCount).to.eq(0);
   });
 
-  it('does not allow lines of 121 characters', () => {
+  it('warns on lines of 121 characters', () => {
     const report = testEslint(`
 //3456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 12345678901
     `);
     if (+process.env.verbose) {
       console.error('detailed errors/warnings:\n', JSON.stringify(report.results, null, 2));
     }
-    expect(report.errorCount).to.eq(1);
-    expect(report.warningCount).to.eq(0);
+    expect(report.errorCount).to.eq(0);
+    expect(report.warningCount).to.eq(1);
     expect(report.results[0].messages[0].ruleId).to.eq('max-len');
   });
 });
