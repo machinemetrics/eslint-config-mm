@@ -2,6 +2,7 @@
 
 module.exports = {
   rules: {
+    'no-else-return': ['off'],
     'max-len': [
       'warn',
       120,
