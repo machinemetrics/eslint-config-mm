@@ -3,7 +3,7 @@ executorType: docker
 jobs:
   build:
     docker:
-      - image: machinemetrics/ci-node:6.10.1.0
+      - image: 352302322568.dkr.ecr.us-west-2.amazonaws.com/mm-ecs/ci-node
     working_directory: ~/eslint-config-mm
     steps:
       - checkout
